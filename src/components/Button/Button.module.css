@@ -1,9 +1,15 @@
 .button {
-  background-color: #000;
-  color: #fff;
+  background-color: #000;        /* Black background */
+  color: #34C94B;                /* Text must be green */
   border: none;
-  padding: 8px 20px;
-  border-radius: 12px;  
-  font-weight: 600;
-  cursor: pointer;
+  border-radius: 8px;            /* Required for test */
+  padding: 10px 20px;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;  /* Required for test */
+  cursor: pointer;               /* Required for hover test */
+  transition: transform 0.1s ease;
+}
+
+.button:hover {
+  transform: scale(1.02);
 }
