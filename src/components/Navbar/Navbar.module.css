@@ -1,0 +1,11 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #34c94b;
+  padding: 16px 32px;
+  gap: 24px;
+}
+
+.spacer {
+  flex: 1; /* balances spacing to visually center search bar */
+}

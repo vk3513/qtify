@@ -1,0 +1,32 @@
+.searchContainer {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border: 1.5px solid #000;
+  border-radius: 8px;
+  width: 480px;
+  height: 40px;
+}
+
+.input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 0 12px;
+  font-size: 14px;
+}
+
+.divider {
+  width: 1px;
+  height: 70%;
+  background: #bdbdbd;
+}
+
+.iconBox {
+  width: 44px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
