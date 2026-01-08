@@ -9,11 +9,9 @@ export default function Navbar() {
     <nav className={styles.navbar}>
       <Logo />
 
-      <div className={styles.spacer}></div>
-
-      <Search placeholder="Search a album of your choice" />
-
-      <div className={styles.spacer}></div>
+      <div className={styles.center}>
+        <Search placeholder="Search a song of your choice" />
+      </div>
 
       <Button>Give Feedback</Button>
     </nav>

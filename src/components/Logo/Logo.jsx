@@ -1,9 +1,13 @@
 import React from "react";
-import logo from "../../assets/logo.png";
 import styles from "./Logo.module.css";
+import logo from "../../assets/logo.png";
 
-export default function Logo() {
+function Logo() {
   return (
-    <img src={logo} alt="QTify logo" className={styles.logoImage} />
+    <div className={styles.logo}>
+      <img src={logo} alt="QTify Logo" />
+    </div>
   );
 }
+
+export default Logo;
