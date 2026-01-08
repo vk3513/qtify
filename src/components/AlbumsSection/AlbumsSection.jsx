@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import Card from "../Card/Card";
-import { fetchTopAlbums } from "../../services/api";
+import { fetchTopAlbums } from "../../api/api";
 
 export default function AlbumsSection() {
   const [albums, setAlbums] = useState([]);
 
   useEffect(() => {
-    fetchTopAlbums().then(setAlbums);
+    fetchTopAlbums().then((data) => {
+      setAlbums(data);
+    });
   }, []);
 
   return (
@@ -14,12 +16,12 @@ export default function AlbumsSection() {
       <h2>Top Albums</h2>
 
       <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
-        {albums.map(album => (
+        {albums.map((album) => (
           <Card
             key={album.id}
             image={album.image}
             title={album.title}
-            followers={album.follows}
+            follows={album.follows}
           />
         ))}
       </div>
