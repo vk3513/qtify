@@ -1,30 +1,20 @@
 import { useEffect, useState } from "react";
-import Card from "../Card/Card";
-import { fetchTopAlbums } from "../../api/api";
+import { fetchTopAlbums, fetchNewAlbums } from "../../api/api";
+import Section from "../Section/Section";
 
 export default function AlbumsSection() {
-  const [albums, setAlbums] = useState([]);
+  const [topAlbums, setTopAlbums] = useState([]);
+  const [newAlbums, setNewAlbums] = useState([]);
 
   useEffect(() => {
-    fetchTopAlbums().then((data) => {
-      setAlbums(data);
-    });
+    fetchTopAlbums().then(setTopAlbums);
+    fetchNewAlbums().then(setNewAlbums);
   }, []);
 
   return (
-    <section>
-      <h2>Top Albums</h2>
-
-      <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
-        {albums.map((album) => (
-          <Card
-            key={album.id}
-            image={album.image}
-            title={album.title}
-            follows={album.follows}
-          />
-        ))}
-      </div>
-    </section>
+    <>
+      <Section title="Top Albums" albums={topAlbums} />
+      <Section title="New Albums" albums={newAlbums} />
+    </>
   );
 }
