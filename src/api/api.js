@@ -19,3 +19,9 @@ export const fetchSongs = async () => {
   const response = await axios.get(`${BASE_URL}/songs`);
   return response.data;
 };
+
+// ✅ Fetch Genres (REQUIRED)
+export const fetchGenres = async () => {
+  const response = await axios.get(`${BASE_URL}/genres`);
+  return response.data.data;
+};

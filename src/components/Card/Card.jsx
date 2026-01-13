@@ -1,13 +1,17 @@
 import styles from "./Card.module.css";
 import Chip from "@mui/material/Chip";
 
-export default function Card({ image, title, followers }) {
+export default function Card({ image, title, followers, likes, type }) {
   return (
     <div className={styles.card}>
       <div className={styles.imageWrapper}>
         <img src={image} alt={title} />
         <Chip
-          label={`${followers} Follows`}
+          label={
+            type === "song"
+              ? `${likes} Likes`
+              : `${followers} Follows`
+          }
           className={styles.chip}
           size="small"
         />

@@ -1,3 +1,21 @@
+/* Remove default browser white space */
+body {
+  margin: 0;
+  background-color: #121212;
+}
+
+/* Main app container */
+.app {
+  background-color: #121212;
+  min-height: 100vh;
+}
+
+/* Albums section background */
+.albumsWrapper {
+  background-color: #121212;
+  padding: 24px 32px;
+}
+
 .App {
   text-align: center;
 }
