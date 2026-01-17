@@ -5,6 +5,8 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+
+  flex-shrink: 0; /* 🔥 THIS IS THE FIX */
 }
 
 .imageWrapper {
@@ -34,6 +36,6 @@
 .title {
   margin-top: 6px;
   font-size: 14px;
-  color: #ffffff;  
+  color: #ffffff;
   line-height: 1.2;
 }

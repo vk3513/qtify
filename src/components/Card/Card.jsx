@@ -12,8 +12,8 @@ export default function Card({ image, title, followers, likes, type }) {
               ? `${likes} Likes`
               : `${followers} Follows`
           }
-          className={styles.chip}
           size="small"
+          className={styles.chip}
         />
       </div>
 

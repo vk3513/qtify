@@ -12,20 +12,22 @@ export default function Section({
 
   return (
     <section className={styles.section}>
+      {/* Header */}
       <div className={styles.header}>
         <h2>{title}</h2>
 
         {!hideToggle && (
-          <button
-            className={styles.toggleBtn}
+          <span
+            className={styles.toggle}
             onClick={() => setShowAll(!showAll)}
           >
             {showAll ? "Collapse" : "Show all"}
-          </button>
+          </span>
         )}
       </div>
 
-      <div className={styles.grid}>
+      {/* Carousel */}
+      <div className={styles.carousel}>
         {data.map((item) => (
           <Card
             key={item.id}
